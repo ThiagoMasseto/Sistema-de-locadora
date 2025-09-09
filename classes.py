@@ -108,14 +108,18 @@ class Jogo(Item):
         self.__Faixaetaria = faixaetaria
 #-----------------------------------------------
 class Cliente:
-    def __init__(self, nome, cpf):
+    def __init__(self, nome, cpf, idcliente):
         self.__nome = nome
         self.__cpf= cpf
+        self.__id= idcliente
         self.__itensLocados= []
 
     #Metodos Gets e Sets
     def getNome(self):
         return self.__nome
+    
+    def getId(self):
+        return self.__id
     
     def getCPF(self):
         return self.__cpf
