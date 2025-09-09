@@ -1,5 +1,6 @@
 import os
 import time
+from funcoes import *
 while True:
     try:
         print("-- Sistema de Locadora --")
@@ -11,7 +12,7 @@ while True:
         escolha=int(input("-->"))
         match escolha:
             case 1:
-                pass
+                cadastrar_clientes()
             case 2:
                 pass
             case 3:

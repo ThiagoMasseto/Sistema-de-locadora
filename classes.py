@@ -19,11 +19,13 @@ class Locadora:
         return itens
     
     #---------------------------------------------------
-    def cadastrarCliente(self):
-        self.__clientes.append()
+    def cadastrarCliente(self,nome, cpf):
+        cliente = Cliente(nome=nome, cpf=cpf)
+        self.__clientes.append(cliente)
 
-    def cadastrarItem(self):
-        self.__itens.append()
+    def cadastrarItem(self, codigo,titulo):
+        item= Item(codigo=codigo, titulo=titulo)
+        self.__itens.append(item)
 
     def listarCliente(self):
         return self.__clientes
@@ -32,10 +34,10 @@ class Locadora:
         return self.__itens
 #-----------------------------------------------
 class Item:
-    def __init__(self, codigo, titulo, disponivel):
+    def __init__(self, codigo, titulo):
         self.__codigo = codigo
         self.__titulo = titulo
-        self.__disponivel = disponivel
+        self.__disponivel = True
 
     #---------------------------------------------
     #metodos Gets e Sets
@@ -63,10 +65,10 @@ class Item:
     #-------------------------------------------
     
     def alugar(self,):
-        pass
+        self.__disponivel = False
 
     def devolver(self,):
-        pass
+        self.__disponivel = True
 #-----------------------------------------------
 class Filme(Item):
     def __init__(self, genero, duracao):
@@ -110,7 +112,7 @@ class Jogo(Item):
         self.__Faixaetaria = faixaetaria
 #-----------------------------------------------
 class Cliente:
-    def __init__(self, nome, cpf, itensLocados):
+    def __init__(self, nome, cpf):
         self.__nome = nome
         self.__cpf= cpf
         self.__itensLocados= []
@@ -137,11 +139,13 @@ class Cliente:
         self.__itensLocados = itensLocados
         return itensLocados
     
-    def locar():
+    def locar(self, codigo, titulo, disponivel):
         pass
 
-    def devolver():
+    def devolver(self, codigo, titulo, disponivel):
+        
         pass
+    
 
     def listarItens(self):
         return self.__itensLocados
