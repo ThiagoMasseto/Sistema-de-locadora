@@ -20,14 +20,17 @@ class Locadora:
     
     #---------------------------------------------------
     def cadastrarCliente(self):
-        pass
+        self.__clientes.append()
+
     def cadastrarItem(self):
-        pass
+        self.__itens.append()
+
     def listarCliente(self):
-        pass
+        return self.__clientes
+    
     def listarItem(self):
-        pass
-        
+        return self.__itens
+#-----------------------------------------------
 class Item:
     def __init__(self, codigo, titulo, disponivel):
         self.__codigo = codigo
@@ -64,7 +67,7 @@ class Item:
 
     def devolver(self,):
         pass
-
+#-----------------------------------------------
 class Filme(Item):
     def __init__(self, genero, duracao):
         self.__Genero = genero
@@ -87,8 +90,6 @@ class Filme(Item):
         self.__Duracao = duracao
         return duracao
 #-----------------------------------------------
-    
-
 class Jogo(Item):
     def __init__(self,plataforma, faixaetaria):
         self.__Plataforma = plataforma
@@ -107,13 +108,12 @@ class Jogo(Item):
 
     def setFaixaetaria (self, faixaetaria):
         self.__Faixaetaria = faixaetaria
-#------------------------------------------------
-
+#-----------------------------------------------
 class Cliente:
     def __init__(self, nome, cpf, itensLocados):
         self.__nome = nome
         self.__cpf= cpf
-        self.__itensLocados= itensLocados
+        self.__itensLocados= []
 
     #Metodos Gets e Sets
     def getNome(self):
@@ -143,6 +143,5 @@ class Cliente:
     def devolver():
         pass
 
-    def listarItens():
-        pass
-     
+    def listarItens(self):
+        return self.__itensLocados
