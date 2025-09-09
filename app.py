@@ -23,7 +23,7 @@ while True:
             case 4:
                 listar_itens()
             case 5:
-                pass
+                controlar_emprestimos()
             case 0:
                 print("Saindo...")
                 time.sleep(1)

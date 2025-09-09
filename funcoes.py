@@ -6,11 +6,12 @@ locadorasenai = Locadora()
 
 def cadastrar_clientes():
     try:
+        idcliente= len[cadastrar_clientes + 1]
         nome=(input("Nome--> "))
 
         cpf=int(input("CPF-->"))
 
-        locadorasenai.cadastrarCliente(nome=nome,cpf=cpf)
+        locadorasenai.cadastrarCliente(idcliente,nome=nome,cpf=cpf)
         print("Cliente Adicionado com Sucesso!")
 
         time.sleep(1)
@@ -64,4 +65,7 @@ def listar_itens():
         print(20 * "-")
     os.system("pause")
     os.system("cls")
+
+def controlar_emprestimos():
+    pass
 

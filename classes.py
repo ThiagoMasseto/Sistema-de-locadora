@@ -58,10 +58,6 @@ class Item:
     def setTitulo(self, titulo):
         self.__titulo = titulo
         return titulo
-    
-    def setDisponivel(self, disponivel):
-        self.__disponivel = disponivel
-        return disponivel
     #-------------------------------------------
     
     def alugar(self,):
