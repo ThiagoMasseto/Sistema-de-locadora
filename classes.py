@@ -90,7 +90,24 @@ class Filme(Item):
     
 
 class Jogo(Item):
-    pass
+    def __init__(self,plataforma, faixaetaria):
+        self.__Plataforma = plataforma
+        self.__Faixaetaria = faixaetaria
+#-----------------------------------------------
+    #metodos gets e sets
+
+    def getPlataforma(self):
+        return self.__Plataforma
+    
+    def getFaixaetaria(self):
+        return self.__Faixaetaria
+    
+    def setPlataforma (self, plataforma):
+        self.__Plataforma = plataforma
+
+    def setFaixaetaria (self, faixaetaria):
+        self.__Faixaetaria = faixaetaria
+#------------------------------------------------
 
 class Cliente:
     def __init__(self, nome, cpf, itensLocados):
