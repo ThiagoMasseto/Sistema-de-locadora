@@ -21,7 +21,7 @@ while True:
             case 3:
                 registrar_itens()
             case 4:
-                pass
+                listar_itens()
             case 5:
                 pass
             case 0:
