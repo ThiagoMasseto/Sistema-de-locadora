@@ -6,7 +6,7 @@ locadorasenai = Locadora()
 
 def cadastrar_clientes():
     try:
-        nome=str(input("Nome--> "))
+        nome=(input("Nome--> "))
 
         cpf=int(input("CPF-->"))
 
