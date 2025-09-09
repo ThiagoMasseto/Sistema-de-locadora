@@ -19,8 +19,8 @@ class Locadora:
         return itens
     
     #---------------------------------------------------
-    def cadastrarCliente(self,nome, cpf):
-        cliente = Cliente(nome=nome, cpf=cpf)
+    def cadastrarCliente(self,nome, cpf, idcliente):
+        cliente = Cliente(nome=nome, cpf=cpf, idcliente=idcliente)
         self.__clientes.append(cliente)
 
     def cadastrarItem(self, codigo,titulo):

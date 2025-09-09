@@ -18,6 +18,7 @@ def cadastrar_clientes():
         os.system("cls")
     except Exception as e:
         print(f" Ocorreu um erro inesperado : {e}")
+        os.system("pause")
 
 def listar_clientes():
     os.system("cls")
