@@ -34,9 +34,15 @@ def registrar_itens():
             os.system("cls")
             match escolha:
                 case 1:
-                    pass
+                    codigoitem=int(input("Código: "))
+                    tituloitem=input("Titulo: ")
+                    locadorasenai.cadastrarItem(codigo=codigoitem, titulo=tituloitem)
+                    print("Item cadastrado com sucesso!")
                 case 2:
-                    pass
+                    codigoitem=int(input("Código: "))
+                    tituloitem=input("Titulo: ")
+                    locadorasenai.cadastrarItem(codigo=codigoitem, titulo=tituloitem)
+                    print("Item cadastrado com sucesso!")
                 case 0:
                     break
                 case _:
@@ -44,4 +50,12 @@ def registrar_itens():
         except Exception as e:
             print(f"Ocorreu um erro inesperado: {e}")
             os.system("pause")
+
+def listar_itens():
+    os.system("cls")
+    for itens in locadorasenai.getItens():
+        print(f"Titulo ->{itens.getTitulo()}\nCódigo ->{itens.getCodigo()}")
+        print(20 * "-")
+    os.system("pause")
+    os.system("cls")
 
