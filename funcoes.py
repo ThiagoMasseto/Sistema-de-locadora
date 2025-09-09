@@ -23,7 +23,7 @@ def cadastrar_clientes():
 def listar_clientes():
     os.system("cls")
     for itens in locadorasenai.getClientes():
-        print(f"ID -> {itens.getID()}CLIENTE ->{itens.getNome()}\nCPF ->{itens.getCPF()}")
+        print(f"ID -> {itens.getId()}CLIENTE ->{itens.getNome()}\nCPF ->{itens.getCPF()}")
         print(20 * "-")
     os.system("pause")
     os.system("cls")
