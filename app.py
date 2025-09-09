@@ -19,7 +19,7 @@ while True:
             case 2:
                 listar_clientes()
             case 3:
-                pass
+                registrar_itens()
             case 4:
                 pass
             case 5:

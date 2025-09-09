@@ -26,8 +26,22 @@ def listar_clientes():
     os.system("pause")
     os.system("cls")
 
-def registrar_filme():
-    pass
+def registrar_itens():
+    while True:
+        try:
+            print("O que voce deseja registrar?\n1-Filme\n2-Jogo\n0-Sair")
+            escolha=int(input("-->"))
+            os.system("cls")
+            match escolha:
+                case 1:
+                    pass
+                case 2:
+                    pass
+                case 0:
+                    break
+                case _:
+                    print("Opção Invalida!")
+        except Exception as e:
+            print(f"Ocorreu um erro inesperado: {e}")
+            os.system("pause")
 
-def registar_jogo():
-    pass
