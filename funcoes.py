@@ -38,15 +38,21 @@ def registrar_itens():
                     tituloitem=input("Titulo: ")
                     locadorasenai.cadastrarItem(codigo=codigoitem, titulo=tituloitem)
                     print("Item cadastrado com sucesso!")
+                    os.system("pause")
+                    os.system("cls")
                 case 2:
                     codigoitem=int(input("Código: "))
                     tituloitem=input("Titulo: ")
                     locadorasenai.cadastrarItem(codigo=codigoitem, titulo=tituloitem)
                     print("Item cadastrado com sucesso!")
+                    os.system("pause")
+                    os.system("cls")
                 case 0:
+                    os.system("cls")
                     break
                 case _:
                     print("Opção Invalida!")
+                    os.system("cls")
         except Exception as e:
             print(f"Ocorreu um erro inesperado: {e}")
             os.system("pause")
