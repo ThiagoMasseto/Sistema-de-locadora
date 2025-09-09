@@ -6,8 +6,10 @@ while True:
         print("-- Sistema de Locadora --")
         print("Seja bem vindo!")
         print("1 - Cadastrar Clientes")
-        print("2 - Registrar itens para locação (filmes e jogos)")
-        print("3 - Controlar Emprestimos")
+        print("2 - Listar Clientes")
+        print("3 - Registrar itens para locação (filmes e jogos)")
+        print("4 - Listar itens")
+        print("5 - Controlar Emprestimos")
         print("0 - Sair")
         escolha=int(input("-->"))
         match escolha:
@@ -16,6 +18,10 @@ while True:
             case 2:
                 pass
             case 3:
+                pass
+            case 4:
+                pass
+            case 5:
                 pass
             case 0:
                 print("Saindo...")
