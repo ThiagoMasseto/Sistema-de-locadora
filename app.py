@@ -3,6 +3,7 @@ import time
 from funcoes import *
 while True:
     try:
+        os.system("cls")
         print("-- Sistema de Locadora --")
         print("Seja bem vindo!")
         print("1 - Cadastrar Clientes")
@@ -16,7 +17,7 @@ while True:
             case 1:
                 cadastrar_clientes()
             case 2:
-                pass
+                listar_clientes()
             case 3:
                 pass
             case 4:

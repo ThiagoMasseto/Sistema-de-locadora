@@ -17,3 +17,17 @@ def cadastrar_clientes():
         os.system("cls")
     except Exception as e:
         print(f" Ocorreu um erro inesperado : {e}")
+
+def listar_clientes():
+    os.system("cls")
+    for itens in locadorasenai.getClientes():
+        print(f"CLIENTE ->{itens.getNome()}\nCPF ->{itens.getCPF()}")
+        print(20 * "-")
+    os.system("pause")
+    os.system("cls")
+
+def registrar_filme():
+    pass
+
+def registar_jogo():
+    pass
