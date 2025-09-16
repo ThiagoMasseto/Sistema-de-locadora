@@ -61,11 +61,15 @@ def registrar_itens():
 
 def listar_itens():
     os.system("cls")
-    for itens in locadorasenai.getItens():
-        print(f"Titulo ->{itens.getTitulo()}\nCódigo ->{itens.getCodigo()}")
-        print(20 * "-")
-    os.system("pause")
-    os.system("cls")
+    if len(locadorasenai.getClientes()) == 0:
+        print("Nao há nenhum cliente cadastrado!")
+        os.system("pause")
+    else:
+        for itens in locadorasenai.getItens():
+            print(f"Titulo ->{itens.getTitulo()}\nCódigo ->{itens.getCodigo()}")
+            print(20 * "-")
+            os.system("pause")
+            os.system("cls")
 
 def controlar_emprestimos():
     while True:
