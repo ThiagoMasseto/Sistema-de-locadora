@@ -139,14 +139,6 @@ class Cliente:
         self.__itensLocados = itensLocados
         return itensLocados
     
-    def locar(self, codigo, titulo, disponivel):
-        pass
-
-    def devolver(self, codigo, titulo, disponivel):
-        
-        pass
-    
-
     def listarItens(self):
         return self.__itensLocados
     
