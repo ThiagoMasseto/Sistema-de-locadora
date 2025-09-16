@@ -72,8 +72,8 @@ def listar_itens():
         for itens in locadorasenai.getItens():
             print(f"Titulo ->{itens.getTitulo()}\nCódigo ->{itens.getCodigo()}")
             print(20 * "-")
-            os.system("pause")
-            os.system("cls")
+        os.system("pause")
+        os.system("cls")
 
 def controlar_emprestimos():
     while True:
