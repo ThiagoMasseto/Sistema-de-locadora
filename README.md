@@ -158,6 +158,6 @@ Representa um cliente da locadora.
 **Digite o ID do cliente:** 1
 
 **Itens disponíveis**: <br>
--Código: 101 | Título: Vingadores <br>
-** Digite o código do item: ** 101 <br>
-** Item 'Vingadores' alugado com sucesso!**
+- Código: 101 | Título: Vingadores <br>
+ Digite o código do item:  101 <br>
+ Item 'Vingadores' alugado com sucesso!*
