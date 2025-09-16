@@ -68,5 +68,56 @@ def listar_itens():
     os.system("cls")
 
 def controlar_emprestimos():
-    pass
+    while True:
+        os.system("cls")
+        print("=== Controle de Empréstimos ===")
+        print("1 - Locar Item")
+        print("2 - Devolver Item")
+        print("0 - Voltar")
+        escolha = int(input("--> "))
+
+        if escolha == 0:
+            break
+
+        # Escolher cliente
+        print("\nClientes:")
+        for cliente in locadorasenai.getClientes():
+            print(f"{cliente.getId()} - {cliente.getNome()}")
+        id_cliente = int(input("Digite o ID do cliente: "))
+        cliente = next((c for c in locadorasenai.getClientes() if c.getId() == id_cliente), None)
+
+        if not cliente:
+            print("Cliente não encontrado!")
+            os.system("pause")
+            continue
+
+        if escolha == 1:  # Locar
+            print("\nItens disponíveis:")
+            for item in locadorasenai.getItens():
+                if item.getDisponivel():
+                    print(f"Código: {item.getCodigo()} | Título: {item.getTitulo()}")
+
+            codigo_item = int(input("Digite o código do item: "))
+            item = next((i for i in locadorasenai.getItens() if i.getCodigo() == codigo_item), None)
+
+            if item and cliente.locar(item):
+                print(f"Item '{item.getTitulo()}' alugado com sucesso!")
+            else:
+                print("Não foi possível locar (talvez já esteja alugado).")
+
+        elif escolha == 2:  # Devolver
+            print("\nItens locados pelo cliente:")
+            for item in cliente.getItensLocados():
+                print(f"Código: {item.getCodigo()} | Título: {item.getTitulo()}")
+
+            codigo_item = int(input("Digite o código do item para devolver: "))
+            item = next((i for i in cliente.getItensLocados() if i.getCodigo() == codigo_item), None)
+
+            if item and cliente.devolver(item):
+                print(f"Item '{item.getTitulo()}' devolvido com sucesso!")
+            else:
+                print("Esse item não está locado por este cliente.")
+
+        os.system("pause")
+
 
