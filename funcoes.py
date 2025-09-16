@@ -60,7 +60,6 @@ def registrar_itens():
             os.system("pause")
 
 def listar_itens():
-    os.system("cls")
     if len(locadorasenai.getClientes()) == 0:
         print("Nao há nenhum cliente cadastrado!")
         os.system("pause")
