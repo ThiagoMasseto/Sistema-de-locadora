@@ -149,3 +149,19 @@ class Cliente:
 
     def listarItens(self):
         return self.__itensLocados
+    
+    def locar(self, item: Item):
+        if item.getDisponivel():
+            item.alugar()
+            self.__itensLocados.append(item)
+            return True
+        else:
+            return False
+
+    def devolver(self, item: Item):
+        if item in self.__itensLocados:
+            item.devolver()
+            self.__itensLocados.remove(item)
+            return True
+        else:
+            return False
