@@ -127,5 +127,3 @@ def controlar_emprestimos():
                 print("Esse item não está locado por este cliente.")
 
         os.system("pause")
-
-
