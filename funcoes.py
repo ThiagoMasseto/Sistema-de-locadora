@@ -21,12 +21,16 @@ def cadastrar_clientes():
         os.system("pause")
 
 def listar_clientes():
-    os.system("cls")
-    for itens in locadorasenai.getClientes():
-        print(f"ID -> {itens.getId()}\nCLIENTE ->{itens.getNome()}\nCPF ->{itens.getCPF()}")
-        print(20 * "-")
-    os.system("pause")
-    os.system("cls")
+    if len(locadorasenai.getClientes()) == 0:
+        print("Nao há nenhum cliente cadastrado!")
+        os.system("pause")
+        os.system("cls")
+    else:
+        for itens in locadorasenai.getClientes():
+            print(f"ID -> {itens.getId()}\nCLIENTE ->{itens.getNome()}\nCPF ->{itens.getCPF()}")
+            print(20 * "-")
+        os.system("pause")
+        os.system("cls")
 
 def registrar_itens():
     while True:
@@ -63,6 +67,7 @@ def listar_itens():
     if len(locadorasenai.getClientes()) == 0:
         print("Nao há nenhum cliente cadastrado!")
         os.system("pause")
+        os.system("cls")
     else:
         for itens in locadorasenai.getItens():
             print(f"Titulo ->{itens.getTitulo()}\nCódigo ->{itens.getCodigo()}")
