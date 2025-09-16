@@ -64,7 +64,7 @@ def registrar_itens():
             os.system("pause")
 
 def listar_itens():
-    if len(locadorasenai.getClientes()) == 0:
+    if len(locadorasenai.getItens()) == 0:
         print("Nao há nenhum item cadastrado!")
         os.system("pause")
         os.system("cls")
