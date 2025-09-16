@@ -1,7 +1,8 @@
 # 🎬 Sistema de Locadora em Python
 ## Projeto desenvolvido como exercício de **Orientação a Objetos em Python**.
 
-Este projeto implementa um **sistema de locadora** em Python, onde é possível cadastrar clientes, registrar itens (filmes e jogos), listar registros e controlar empréstimos.
+Este projeto implementa um **sistema de locadora** em Python, onde é possível cadastrar clientes, registrar itens (filmes e jogos), listar registros e controlar empréstimos. <br>
+A pedido do docente do senai via notion ( https://teal-arithmetic-d58.notion.site/Atividade-Sistema-de-Locadora-2697766264ab80b2bcc4ed54babd9ba3 )
 
 ---
 
